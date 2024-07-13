@@ -48,8 +48,8 @@ export class SingleLinkedList {
     if( this.head === null ) return console.log('Finished');
 
     let current = this.head
-    while( current.next !== null ){
-      console.log(`Node: ${current.next.value}`);
+    while( current !== null ){
+      console.log(`Node: ${current.value}`);
       current = current.next
     }
 

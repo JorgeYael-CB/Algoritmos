@@ -1,4 +1,5 @@
 import { Node } from "./Node.js";
+import { RemoveDups } from "./RemoveDups.js";
 
 
 class SingleLinkedList {
@@ -60,10 +61,19 @@ class SingleLinkedList {
 
 
 const node = new SingleLinkedList()
+const removeDups = new RemoveDups();
+
 
 node.appendToTail(1)
+node.appendToTail(2)
+node.appendToTail(2)
 node.appendToTail(2)
 node.appendToTail(3)
 node.appendToTail(4)
 
+node.print()
+
+console.log('----------------')
+
+removeDups.removeDups( node.head )
 node.print()

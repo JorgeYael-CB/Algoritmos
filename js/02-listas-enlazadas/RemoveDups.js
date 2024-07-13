@@ -12,15 +12,14 @@ export class RemoveDups {
 
     foundValues.add( current.value );
     while( current !== null && current.next !== null ){
-      const has = foundValues.has( current.next )
+      const has = foundValues.has( current.next.value )
 
-      // devuelve true o false ya que no acepta valores repetidos
       if( !has ){
         foundValues.add(current.next.value)
+        current = current.next;
+      } else {
         current.next = current.next.next;
       }
-
-      current = current.next
     }
   }
 

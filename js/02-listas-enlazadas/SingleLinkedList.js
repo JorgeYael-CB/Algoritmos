@@ -2,7 +2,7 @@ import { Node } from "./Node.js";
 import { RemoveDups } from "./RemoveDups.js";
 
 
-class SingleLinkedList {
+export class SingleLinkedList {
 
   constructor(){
     this.head = null;
@@ -60,9 +60,10 @@ class SingleLinkedList {
 
 
 
-const node = new SingleLinkedList()
-const removeDups = new RemoveDups();
+export const node = new SingleLinkedList()
+export const node2 = new SingleLinkedList();
 
+const removeDups = new RemoveDups();
 
 node.appendToTail(1)
 node.appendToTail(2)
@@ -70,10 +71,24 @@ node.appendToTail(2)
 node.appendToTail(2)
 node.appendToTail(3)
 node.appendToTail(4)
+node.appendToTail(4)
+node.appendToTail(4)
+node.appendToTail(4)
+node.appendToTail(4)
+node.appendToTail(5)
+node.appendToTail(6)
+node.appendToTail(7)
+node.appendToTail(8)
 
-node.print()
-
-console.log('----------------')
+node2.appendToTail(1)
+node2.appendToTail(2)
+node2.appendToTail(2)
+node2.appendToTail(2)
+node2.appendToTail(3)
+node2.appendToTail(4)
+node2.appendToTail(4)
 
 removeDups.removeDups( node.head )
+removeDups.removeDups( node2.head )
 node.print()
+node2.print()

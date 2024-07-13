@@ -50,7 +50,7 @@ export class SingleLinkedList {
     let current = this.head
     while( current !== null ){
       console.log(`Node: ${current.value}`);
-      current = current.next
+      current = current.next || null
     }
 
     console.log('Finished!')
@@ -90,5 +90,5 @@ node2.appendToTail(4)
 
 removeDups.removeDups( node.head )
 removeDups.removeDups( node2.head )
-node.print()
-node2.print()
+// node.print()
+// node2.print()
